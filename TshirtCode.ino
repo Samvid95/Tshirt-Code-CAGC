@@ -10,10 +10,10 @@ Uses this library: https://github.com/moderndevice/CapSense
 
 const int ledPin =  7;      // the number of the LED pin on FLORA
 
-CapPin cPin_10 = CapPin(10);    // read pin 10 (D10 on Flora)
+CapPin cPin_10 = CapPin(10);    // read pin 10 (D10 on Flora) //Right
 CapPin capacitivePin = cPin_10;
 
-CapPin cPin_12 = CapPin(12);
+CapPin cPin_12 = CapPin(12);  //LeftJJJL
 CapPin capacitivePin1 = cPin_12;
 
 
@@ -46,13 +46,13 @@ void loop()
     if ((total > THRESH) && (! currentPressed)) {
       currentPressed = true;
       digitalWrite(ledPin, HIGH);  
-      Keyboard.press('J');
+      Keyboard.press('R');
     }
     else if ((total <= THRESH) && (currentPressed)) {
       // key was released (no touch, and it was pressed before)   
       currentPressed = false;
       digitalWrite(ledPin, LOW);
-      Keyboard.release('J');
+      Keyboard.release('R');
     }
 
     
